@@ -8,7 +8,7 @@ public class Cadre extends Employe {
 		super(nom, age, telephone);
 	}
 	
-	public Cadre(String nom, int age, String telephone, SalaireCadre infosSalaire) {
+	public Cadre(String nom, int age, String telephone, int heures, SalaireCadre infosSalaire) {
 		super(nom, age, telephone);
 		InfosSalaire = infosSalaire;
 	}

@@ -1,15 +1,10 @@
 package entreprise.salaire;
 
-public class SalaireCadre implements InfosSalaire {
-	
-	private double TarifHoraire = 8;
-	private double TauxSupplement = 0.5;
+public class SalaireCadre implements InfosSalaire, TauxCadre {
 
-	public double CalculerSalaire(int heures) {
-		if (heures < 35)
-		{
-			
-		}
+	private int NombreHeureSemaine;
+	
+	public double CalculerSalaire() {
 		return 0;
 	}
 }

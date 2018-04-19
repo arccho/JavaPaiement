@@ -1,11 +1,10 @@
 package entreprise.salaire;
 
-public class SalaireOuvrier implements InfosSalaire {
+public class SalaireOuvrier implements InfosSalaire, TauxOuvrier {
 	
-	private double TarifHoraire = 8;
-	private double TauxSupplement = 0.3;
+	private int NombreHeureSemaine;
 	
-	public double CalculerSalaire(int heures) {
+	public double CalculerSalaire() {
 		return 0;
 	}
 }

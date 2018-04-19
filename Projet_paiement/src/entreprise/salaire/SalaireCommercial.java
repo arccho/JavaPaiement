@@ -1,10 +1,8 @@
 package entreprise.salaire;
 
-public class SalaireCommercial implements InfosSalaire {
+public class SalaireCommercial implements InfosSalaire, TauxCommercial {
 	
-	private double TauxChiffreAffaires = 0.09;
-	
-	public double CalculerSalaire(int heures) {
+	public double CalculerSalaire() {
 		return 0;
 	}
 }
