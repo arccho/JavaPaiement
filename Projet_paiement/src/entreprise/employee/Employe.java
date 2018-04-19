@@ -10,6 +10,14 @@ public abstract class Employe {
 	
 	protected InfosSalaire InfosSalaire;
 	
+	public Employe(){}
+	
+	public Employe(String nom, int age, String telephone) {
+		Nom = nom;
+		Age = age;
+		Telephone = telephone;
+	}
+	
 	public String getNom() {
 		return Nom;
 	}

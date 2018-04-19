@@ -1,10 +1,15 @@
 package entreprise.employee;
 
+import entreprise.salaire.SalaireCollaborateur;
+
 public class Collaborateur extends Employe {
 
-	Collaborateur(String nom, int age, String telephone) {
-		Nom = nom;
-		Age = age;
-		Telephone = telephone;
+	public Collaborateur(String nom, int age, String telephone) {
+		super(nom, age, telephone);
+	}
+	
+	public Collaborateur(String nom, int age, String telephone, SalaireCollaborateur infosSalaire) {
+		super(nom, age, telephone);
+		InfosSalaire = infosSalaire;
 	}
 }
