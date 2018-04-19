@@ -12,4 +12,8 @@ public class Cadre extends Employe {
 		super(nom, age, telephone);
 		InfosSalaire = infosSalaire;
 	}
+	
+	public void setInfosSalaire(SalaireCadre infosSalaire) {
+		InfosSalaire = infosSalaire;
+	}
 }

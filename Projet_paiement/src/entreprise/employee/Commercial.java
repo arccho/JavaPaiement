@@ -12,4 +12,8 @@ public class Commercial extends Employe {
 		super(nom, age, telephone);
 		InfosSalaire = infosSalaire;
 	}
+	
+	public void setInfosSalaire(SalaireCommercial infosSalaire) {
+		InfosSalaire = infosSalaire;
+	}
 }

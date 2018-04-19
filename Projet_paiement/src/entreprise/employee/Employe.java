@@ -38,15 +38,12 @@ public abstract class Employe {
 		Telephone = telephone;
 	}
 	
-	//////////////////////////////////////////
 	public double getSalaire() {
-		//TODO getSalaire
-		return 0;
+		return InfosSalaire.calculerSalaire();
 	}
 	
-	public void setInfosSalaire(InfosSalaire infoDalaire) {
-		InfosSalaire = infoDalaire;
+	public void afficherSalaire( ) {
+		System.out.println(Nom + " gagne " + getSalaire() + " €\n");
 	}
-	//////////////////////////////////////////////
 	
 }

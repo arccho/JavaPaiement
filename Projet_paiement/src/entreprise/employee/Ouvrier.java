@@ -14,4 +14,8 @@ public class Ouvrier extends Employe {
 		super(nom, age, telephone);
 		InfosSalaire = infosSalaire;
 	}
+	
+	public void setInfosSalaire(SalaireOuvrier infosSalaire) {
+		InfosSalaire = infosSalaire;
+	}
 }
