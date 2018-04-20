@@ -1,5 +1,5 @@
-package chaine;
+package chaine.emission;
 
 public interface Emission {
-
+	
 }
