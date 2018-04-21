@@ -44,7 +44,7 @@ public class Fiction extends Emission implements TypeFiction {
 	@Override
 	public int getHeureMinimumPlannification() {
 		if (InfosPlannification == null) {
-			throw new NullPointerException("Aucune plannification n'a été attribuée à cette émission");
+			throw new NullPointerException("Aucune plannification n'a été attribuée à  l'émission " + Nom);
 		}
 		
 		if(Rediffusion == true) {
