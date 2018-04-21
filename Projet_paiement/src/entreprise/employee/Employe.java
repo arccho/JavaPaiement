@@ -39,10 +39,13 @@ public abstract class Employe {
 	}
 	
 	public double getSalaire() {
+		if (InfosSalaire == null) {
+			throw new NullPointerException("L'employé " + Nom + " n'a actuellement aucun paramètre attribué sur son salaire");
+		}
 		return InfosSalaire.calculerSalaire();
 	}
 	
-	public void afficherSalaire( ) {
+	public void afficherSalaire() {
 		System.out.println(Nom + " gagne " + getSalaire() + " €\n");
 	}
 	

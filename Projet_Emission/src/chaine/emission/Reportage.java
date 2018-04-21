@@ -2,35 +2,22 @@ package chaine.emission;
 
 public class Reportage extends Emission implements TypeReportage {
 	
-	private String Nom;
-	private String Theme;
-	private int Duree;
+	protected Documentaire Theme;
 	
-	public Reportage(String nom, String theme, int duree)
-	{
+	public Reportage(String nom, Documentaire theme) {
 		super(nom);
 		Theme = theme;
-		Duree = duree;
 	}
 
-	public String getNom() {
-		return Nom;
-	}
-
-	public String getTheme() {
+	public Documentaire getTheme() {
 		return Theme;
 	}
 
-	public void setTheme(String theme) {
+	public void setTheme(Documentaire theme) {
 		Theme = theme;
 	}
-
-	public int getDuree() {
-		return Duree;
-	}
-
-	public void setDuree(int duree) {
-		Duree = duree;
-	}
 	
+	public void SetInfosPlannification(PlannificationReportage infosPlannification) {
+		InfosPlannification = infosPlannification;
+	}
 }

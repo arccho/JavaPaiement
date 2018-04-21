@@ -2,12 +2,11 @@ package chaine.emission;
 
 public class Fiction extends Emission implements TypeFiction {
 
-	private int AnneeRealisation;
-	private String NomRealisateur;
-	private boolean Rediffusion;
+	protected int AnneeRealisation;
+	protected String NomRealisateur;
+	protected boolean Rediffusion;
 	
-	public Fiction(String nom, int annee_realisation,  String nom_realisateur, boolean rediffusion)
-	{
+	public Fiction(String nom, int annee_realisation,  String nom_realisateur, boolean rediffusion) {
 		super(nom);
 		AnneeRealisation = annee_realisation;
 		NomRealisateur = nom_realisateur;
@@ -38,4 +37,31 @@ public class Fiction extends Emission implements TypeFiction {
 		Rediffusion = rediffusion;
 	}
 	
+	public void SetInfosPlannification(PlannificationFiction infosPlannification) {
+		InfosPlannification = infosPlannification;
+	}
+	
+	@Override
+	public int getHeureMinimumPlannification() {
+		if (InfosPlannification == null) {
+			throw new NullPointerException("Aucune plannification n'a été attribuée à cette émission");
+		}
+		
+		if(Rediffusion == true) {
+			return 0;
+		}
+		return InfosPlannification.heurePlannification().getHeureMinimum();
+	}
+	
+	@Override
+	public int getHeureMaximumPlannification() {
+		if (InfosPlannification == null) {
+			throw new NullPointerException("Aucune plannification n'a été attribuée à cette émission");
+		}
+		
+		if(Rediffusion == true) {
+			return 24;
+		}
+		return InfosPlannification.heurePlannification().getHeureMaximum();
+	}
 }
