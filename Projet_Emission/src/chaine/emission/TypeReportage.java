@@ -1,5 +1,5 @@
 package chaine.emission;
 
-public interface TypeReportage extends Emission {
+public interface TypeReportage {
 
 }

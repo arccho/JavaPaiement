@@ -1,13 +1,14 @@
 package chaine.emission;
 
-public abstract class Fiction implements TypeFiction {
+public class Fiction extends Emission implements TypeFiction {
 
 	private int AnneeRealisation;
 	private String NomRealisateur;
 	private boolean Rediffusion;
 	
-	public Fiction(int annee_realisation,  String nom_realisateur, boolean rediffusion)
+	public Fiction(String nom, int annee_realisation,  String nom_realisateur, boolean rediffusion)
 	{
+		super(nom);
 		AnneeRealisation = annee_realisation;
 		NomRealisateur = nom_realisateur;
 		Rediffusion = rediffusion;

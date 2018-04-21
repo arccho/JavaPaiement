@@ -1,18 +1,13 @@
 package chaine.emission;
 
-public abstract class Divertissement implements TypeDivertissement {
+public class Divertissement extends Emission implements TypeDivertissement {
 
-	private String Nom;
 	private int Duree;
 	
 	public Divertissement(String nom, int duree)
 	{
-		Nom = nom;
+		super(nom);
 		Duree = duree;
-	}
-
-	public String getNom() {
-		return Nom;
 	}
 
 	public int getDuree() {

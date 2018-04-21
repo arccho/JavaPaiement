@@ -1,6 +1,6 @@
 package chaine.emission;
 
-public abstract class Reportage implements TypeReportage {
+public class Reportage extends Emission implements TypeReportage {
 	
 	private String Nom;
 	private String Theme;
@@ -8,7 +8,7 @@ public abstract class Reportage implements TypeReportage {
 	
 	public Reportage(String nom, String theme, int duree)
 	{
-		Nom = nom;
+		super(nom);
 		Theme = theme;
 		Duree = duree;
 	}

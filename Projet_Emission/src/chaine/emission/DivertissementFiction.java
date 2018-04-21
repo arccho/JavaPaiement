@@ -1,9 +1,7 @@
 package chaine.emission;
 
-public abstract class DivertissementFiction implements TypeDivertissement, TypeFiction {
+public class DivertissementFiction extends Emission implements TypeDivertissement, TypeFiction {
 	
-
-	private String Nom;
 	private int Duree;
 	private int AnneeRealisation;
 	private String NomRealisateur;
@@ -11,15 +9,11 @@ public abstract class DivertissementFiction implements TypeDivertissement, TypeF
 	
 	public DivertissementFiction(String nom, int duree, int annee_realisation,  String nom_realisateur, boolean rediffusion)
 	{
-		Nom = nom;
+		super(nom);
 		Duree = duree;
 		AnneeRealisation = annee_realisation;
 		NomRealisateur = nom_realisateur;
 		Rediffusion = rediffusion;
-	}
-
-	public String getNom() {
-		return Nom;
 	}
 
 	public int getDuree() {
