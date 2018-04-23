@@ -1,14 +1,23 @@
 package factorielle.calcul;
 
+import java.security.InvalidParameterException;
+
 public class calcul {
 	
-	public int factorielle(int number) {
+	public static int factorielle(int number) {
 		
-		if(number == 0) {
-			return 1;
+		if(number < 0) {
+			throw new InvalidParameterException("Factorielle d'un nombre négatif impossible");
 		}
-		else {
-			return number * factorielle(number -1);
+		
+		int total = 1;
+		for (int boucle=1; boucle <= number; boucle++) {
+			if((long)total * (long)boucle > Integer.MAX_VALUE) {
+				throw new InvalidParameterException("Le nombre maximum du type entier ne peux exceder " + Integer.MAX_VALUE);
+			}
+			total =  total * boucle;
 		}
+		
+		return total;
 	}
 }
