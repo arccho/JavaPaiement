@@ -45,6 +45,8 @@ public class test {
 		manga.SetInfosPlannification(new PlannificationDivertissement());
 		Fiction Serie = new Fiction("Serie Seigneur des anneaux", 2003, "realisateur4", true);
 		Serie.SetInfosPlannification(new PlannificationFiction(10));
+		Fiction Serie2 = new Fiction("Les Simpsons", 1985, "realisateur5", true);
+		Serie2.SetInfosPlannification(new PlannificationFiction(1));
 		
 		Programme programme = new Programme();
 		programme.ajouterEmission(reportageAnimal);
@@ -54,6 +56,7 @@ public class test {
 		programme.ajouterEmission(SerieAnimé);
 		programme.ajouterEmission(manga);
 		programme.ajouterEmission(Serie);
+		programme.ajouterEmission(Serie2);
 		programme.afficherProgramme();
 
 	}
