@@ -5,11 +5,13 @@ import java.util.ArrayList;
 
 public class LotArticle implements Article {
 
+	private String reference;
 	private float pourcentageReduction;
 	
 	private ArrayList<Article> ListeEnfantsArticle = new ArrayList<Article>();
 	
-	public LotArticle(float reduction) {
+	public LotArticle(String ref, float reduction) {
+		reference = ref;
 		pourcentageReduction = reduction;
 	}
 	
@@ -19,12 +21,11 @@ public class LotArticle implements Article {
     		ListeEnfantsArticle.add(article);
     	}
     	else if (ListeEnfantsArticle.get(0).getMarque().equals(article.getMarque()) 
-    			&& ListeEnfantsArticle.get(0).getNom().equals(article.getNom()) 
-    			&& ListeEnfantsArticle.get(0).getReference().equals(article.getReference()))
+    			&& ListeEnfantsArticle.get(0).getNom().equals(article.getNom()))
     		ListeEnfantsArticle.add(article);
     	else
-    		throw new InvalidParameterException("L'article à ajouter n'est pas le même que ceux du lot.\n"
-    				+ "Il ne peut donc pas être ajouté");
+    		throw new InvalidParameterException("L'article de référence " + article.getReference() + " à ajouter n'est pas le même que ceux du lot, "
+    				+ "il ne peut donc pas être ajouté");
     }
 
     public void remove(Article article)
@@ -34,10 +35,7 @@ public class LotArticle implements Article {
 
 	@Override
 	public String getReference() {
-		if (ListeEnfantsArticle.isEmpty())
-			return "aucune reference";
-		else
-			return ListeEnfantsArticle.get(0).getReference();
+		return reference;
 	}
 
 	@Override
