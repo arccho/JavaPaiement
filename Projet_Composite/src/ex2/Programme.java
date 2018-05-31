@@ -1,5 +1,7 @@
 package ex2;
 
+import java.awt.Color;
+
 import ex2.Stylo.Couleur;
 
 public class Programme {
